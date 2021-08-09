@@ -30,8 +30,8 @@ def parseFeed(RSSFeed):
 def findMatches(RSSData, keywords):
     for item in RSSData:
         for exp in keywords:
-            if exp in item['desc']:
-                print(' > MATCH on %s: Look at %s\n%s' % exp, item['title'], item['link'])
+            if exp in item['desc'].text:
+                print(' > MATCH on ''%s'': Look at %s\n%s' % (exp, item['title'].text, item['link'].text))
 
 
 for feed, rss in feeds.items():

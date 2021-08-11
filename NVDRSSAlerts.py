@@ -31,7 +31,7 @@ def findMatches(RSSData, keywords):
     for item in RSSData:
         for exp in keywords:
             if exp in item['desc'].text:
-                print(' > MATCH on ''%s'': Look at %s\n%s' % (exp, item['title'].text, item['link'].text))
+                print(' > MATCH on ''%s'': Look at %s\n%s' % (exp, item['title'].text, item['link']))
 
 
 for feed, rss in feeds.items():
